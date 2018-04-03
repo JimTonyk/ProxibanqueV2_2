@@ -22,7 +22,7 @@ primary key (idclient)
 
 create table comptecourant (
 numcompte int(8) ,
-solde int,
+solde double,
 dateouverture varchar(10),
 idclient int unique,
 primary key (numcompte),
@@ -31,7 +31,7 @@ foreign key (idclient) references client(idclient)
 
 create table compteepargne (
 numcompte int(8) ,
-solde int,
+solde double,
 dateouverture varchar(10),
 tauxremun double(5, 2),
 idclient int unique,
