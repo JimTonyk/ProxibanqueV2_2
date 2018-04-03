@@ -20,6 +20,7 @@ public class Test1 {
 		// clientDao.creerClient(c3);
 
 		clientDao.supprimerClient(5);
+
 	}
 
 }
