@@ -16,6 +16,10 @@ public interface PBService {
 
 	List<Client> obtenirListeClients();
 
+	// *** MODIFICATION ***
+	
+	void modifierClient(Client client);
+	
 	// *** SUPPRESSION ***
 
 	void supprimerClient(int idClient);

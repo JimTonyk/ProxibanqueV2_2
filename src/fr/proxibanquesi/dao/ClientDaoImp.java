@@ -65,7 +65,7 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 		}
 		return client;
 	}
-	
+
 	@Override
 	public List<Client> obtenirTousClients() {
 		Connection cnx = null;
@@ -95,6 +95,36 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 			this.closeConnection(cnx, pstmt, rs);
 		}
 		return clients;
+	}
+
+	// *** MODIFICATION ***
+
+	@Override
+	public void modifierClient(Client client) {
+		Connection cnx = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			cnx = this.getConnection();
+			String sql = "update from `client` set `nom`=?, `prenom`=?,"
+					+ "`adresse`=?, `codePostal`=?, `ville`=?, `telephone`=? where `idclient`=?";
+			pstmt = cnx.prepareStatement(sql);
+			pstmt.setString(1, client.getNom());
+			pstmt.setString(2, client.getPrenom());
+			pstmt.setString(3, client.getAdresse());
+			pstmt.setString(4, client.getCodePostal());
+			pstmt.setString(5, client.getVille());
+			pstmt.setString(6, client.getTelephone());
+			pstmt.setInt(7, client.getIdClient());
+			pstmt.executeUpdate();
+
+		} catch (SQLException | ClassNotFoundException ex) {
+			ex.printStackTrace();
+		}
+		finally {
+			this.closeConnection(cnx, pstmt, rs);
+		}
+
 	}
 
 	// *** SUPPRESSION ***

@@ -28,7 +28,7 @@ public class Client {
 	public int getIdClient() {
 		return idClient;
 	}
-	
+
 	public void setIdClient(int idClient) {
 		this.idClient = idClient;
 	}
@@ -55,6 +55,30 @@ public class Client {
 
 	public String getTelephone() {
 		return telephone;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
 	// *** AUTRES METHODES ***

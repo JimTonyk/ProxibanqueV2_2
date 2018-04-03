@@ -21,7 +21,7 @@ public class PBServiceImp implements PBService {
 	}
 
 	// *** LECTURE ***
-	
+
 	@Override
 	public Client obtenirClient(int idClient) {
 		return clientDao.obtenirClient(idClient);
@@ -32,6 +32,13 @@ public class PBServiceImp implements PBService {
 		return clientDao.obtenirTousClients();
 	}
 
+	// *** MODIFICATION ***
+	
+	@Override
+	public void modifierClient(Client client) {
+		clientDao.modifierClient(client);
+	}
+	
 	// *** SUPPRESSION ***
 
 	@Override
@@ -40,7 +47,7 @@ public class PBServiceImp implements PBService {
 	}
 
 	// *** ASSOCIATION COMPTE ***
-	
+
 	@Override
 	public void associerCompteCourant(int idClient) {
 		int numeroCompte = genererNumero();
@@ -49,7 +56,7 @@ public class PBServiceImp implements PBService {
 		CompteCourant compteCourant = new CompteCourant(numeroCompte, solde, dateOuverture, idClient);
 		compteDao.creerCompteCourant(compteCourant);
 	}
-	
+
 	@Override
 	public void associerCompteEpargne(int idClient) {
 		int numeroCompte = genererNumero();
@@ -72,14 +79,14 @@ public class PBServiceImp implements PBService {
 		Date date = new Date();
 		return sdfDate.format(date);
 	}
-	
+
 	// *** OBTENTION COMPTES ***
-	
+
 	@Override
 	public CompteCourant obtenirCompteCourant(int idClient) {
 		return compteDao.obtenirCompteCourant(idClient);
 	}
-	
+
 	@Override
 	public CompteEpargne obtenirCompteEpargne(int idClient) {
 		return compteDao.obtenirCompteEpargne(idClient);

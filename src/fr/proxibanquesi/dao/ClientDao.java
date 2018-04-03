@@ -15,6 +15,10 @@ public interface ClientDao {
 
 	List<Client> obtenirTousClients();
 
+	// *** MODIFICATION ***
+	
+	void modifierClient(Client client);
+	
 	// *** SUPPRESSION ***
 
 	void supprimerClient(int idClient);
