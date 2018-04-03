@@ -35,5 +35,9 @@ public interface PBService {
 	CompteCourant obtenirCompteCourant(int idClient);
 
 	CompteEpargne obtenirCompteEpargne(int idClient);
+	
+	// *** OPERATIONS ***
+	
+	public double simulerCredit(double montant, int dureeMois, double taux);
 
 }

@@ -92,4 +92,11 @@ public class PBServiceImp implements PBService {
 		return compteDao.obtenirCompteEpargne(idClient);
 	}
 
+	// *** OPERATIONS ***
+	
+	@Override
+	public double simulerCredit(double montant, int dureeMois, double taux) {
+		return (montant / dureeMois) * taux;
+	}
+
 }
