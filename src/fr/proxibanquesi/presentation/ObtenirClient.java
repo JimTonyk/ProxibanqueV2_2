@@ -14,10 +14,10 @@ import fr.proxibanquesi.service.PBService;
 import fr.proxibanquesi.service.PBServiceImp;
 
 /**
- * Servlet implementation class ModifierClient
+ * Servlet implementation class ObtenirClient
  */
-@WebServlet("/ModifierClient")
-public class ModifierClient extends HttpServlet {
+@WebServlet("/ObtenirClient")
+public class ObtenirClient extends HttpServlet {
 	
 	private PBService pbs = new PBServiceImp();
 	private static final long serialVersionUID = 1L;
@@ -25,7 +25,7 @@ public class ModifierClient extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ModifierClient() {
+    public ObtenirClient() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,25 +34,21 @@ public class ModifierClient extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		int idClient = Integer.valueOf(request.getParameter("idClient"));
+		Client client = pbs.obtenirClient(idClient);
+		
+		request.setAttribute("client", client);
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("modificationclient.jsp");
+		dispatcher.forward(request, response);		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int idClient = Integer.parseInt(request.getParameter("idClient"));
-		
-		String nom = request.getParameter("nom");
-		String prenom = request.getParameter("prenom");
-		String adresse = request.getParameter("adresse");
-		String codePostal = request.getParameter("codePostal");
-		String ville = request.getParameter("ville");
-		String telephone = request.getParameter("telephone");
-
-		Client client = new Client(nom, prenom, adresse, codePostal, ville, telephone);
-		pbs.modifierClient(idClient, client);
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

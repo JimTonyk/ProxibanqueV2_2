@@ -18,7 +18,7 @@ public interface PBService {
 
 	// *** MODIFICATION ***
 	
-	void modifierClient(Client client);
+	void modifierClient(int idClient, Client client);
 	
 	// *** SUPPRESSION ***
 

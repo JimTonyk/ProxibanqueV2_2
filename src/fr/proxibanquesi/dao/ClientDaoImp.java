@@ -100,14 +100,14 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 	// *** MODIFICATION ***
 
 	@Override
-	public void modifierClient(Client client) {
+	public void modifierClient(int idClient, Client client) {
 		Connection cnx = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
 			cnx = this.getConnection();
-			String sql = "update from `client` set `nom`=?, `prenom`=?,"
-					+ "`adresse`=?, `codePostal`=?, `ville`=?, `telephone`=? where `idclient`=?";
+			String sql = "update `client` set `nom`= ?, `prenom`= ?,"
+					+ " `adresse`= ?, `codePostal`= ?, `ville`= ?, `telephone`= ? where `idclient`= ?";
 			pstmt = cnx.prepareStatement(sql);
 			pstmt.setString(1, client.getNom());
 			pstmt.setString(2, client.getPrenom());
@@ -115,13 +115,12 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 			pstmt.setString(4, client.getCodePostal());
 			pstmt.setString(5, client.getVille());
 			pstmt.setString(6, client.getTelephone());
-			pstmt.setInt(7, client.getIdClient());
+			pstmt.setInt(7, idClient);
 			pstmt.executeUpdate();
 
 		} catch (SQLException | ClassNotFoundException ex) {
 			ex.printStackTrace();
-		}
-		finally {
+		} finally {
 			this.closeConnection(cnx, pstmt, rs);
 		}
 

@@ -35,8 +35,8 @@ public class PBServiceImp implements PBService {
 	// *** MODIFICATION ***
 	
 	@Override
-	public void modifierClient(Client client) {
-		clientDao.modifierClient(client);
+	public void modifierClient(int idClient, Client client) {
+		clientDao.modifierClient(idClient, client);
 	}
 	
 	// *** SUPPRESSION ***

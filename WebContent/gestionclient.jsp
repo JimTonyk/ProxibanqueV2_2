@@ -12,7 +12,7 @@
 		<li><a href="AssocierCompteCourant?idClient=${param['idClient']}">Associer un compte courant au client</a></li>
 		<li><a href="AssocierCompteEpargne?idClient=${param['idClient']}">Associer un compte épargne au client</a></li>
 		<li><a href="DecrireClient?idClient=${param['idClient']}">Décrire le client</a></li>
-		<li><a href="ModifierClient?idClient=${param['idClient']}">Modifier les paramètres du client (nom, prénom, adresse...)</a></li>
+		<li><a href="ObtenirClient?idClient=${param['idClient']}">Modifier les paramètres du client (nom, prénom, adresse...)</a></li>
 		<li><a href="SupprimerClient?idClient=${param['idClient']}">Supprimer ce client</a></li>
 	</ul>
 </body>
