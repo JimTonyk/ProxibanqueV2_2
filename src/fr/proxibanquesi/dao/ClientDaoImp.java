@@ -36,6 +36,37 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 	// *** LECTURE ***
 
 	@Override
+	public Client obtenirClient(int idClient) {
+		Connection cnx = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Client client = null;
+		try {
+			cnx = this.getConnection();
+			String sql = "select * from `client` where `idclient` = ?";
+			pstmt = cnx.prepareStatement(sql);
+			pstmt.setInt(1, idClient);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				int idclient = rs.getInt(1);
+				String nom = rs.getString(2);
+				String prenom = rs.getString(3);
+				String adresse = rs.getString(4);
+				String codePostal = rs.getString(5);
+				String ville = rs.getString(6);
+				String telephone = rs.getString(7);
+				client = new Client(nom, prenom, adresse, codePostal, ville, telephone);
+				client.setIdClient(idclient);
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			this.closeConnection(cnx, pstmt, rs);
+		}
+		return client;
+	}
+	
+	@Override
 	public List<Client> obtenirTousClients() {
 		Connection cnx = null;
 		PreparedStatement pstmt = null;

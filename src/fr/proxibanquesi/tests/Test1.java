@@ -2,24 +2,18 @@ package fr.proxibanquesi.tests;
 
 import fr.proxibanquesi.dao.*;
 import fr.proxibanquesi.model.Client;
+import fr.proxibanquesi.model.CompteCourant;
+import fr.proxibanquesi.service.PBService;
+import fr.proxibanquesi.service.PBServiceImp;
 
 public class Test1 {
 
 	public static void main(String[] args) {
 
-		ClientDao clientDao = new ClientDaoImp();
+		PBService pbs = new PBServiceImp();
+		
+		pbs.associerCompteCourant(1);		
 
-		// Client c1 = new Client("Dupont", "Michel", "1 rue 1", "75000", "Paris",
-		// "0100000000");
-		// Client c2 = new Client("Durand", "Michel", "1 rue 2", "75000", "Paris",
-		// "0100000000");
-		// Client c3 = new Client("Martin", "Michel", "1 rue 3", "75000", "Paris",
-		// "0100000000");
-		// clientDao.creerClient(c1);
-		// clientDao.creerClient(c2);
-		// clientDao.creerClient(c3);
-
-		clientDao.supprimerClient(5);
 
 	}
 

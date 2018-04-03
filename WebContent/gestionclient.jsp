@@ -9,6 +9,9 @@
 <body>
 	<h1>Que souhaitez-vous faire avec ce client ?</h1>
 	<ul>
+		<li><a href="AssocierCompteCourant?idClient=${param['idClient']}">Associer un compte courant au client</a></li>
+		<li><a href="AssocierCompteEpargne?idClient=${param['idClient']}">Associer un compte épargne au client</a></li>
+		<li><a href="DecrireClient?idClient=${param['idClient']}">Décrire le client</a></li>
 		<li>Modifier les paramètres du client (nom, prénom, adresse...)</li>
 		<li><a href="SupprimerClient?idClient=${param['idClient']}">Supprimer ce client</a></li>
 	</ul>
