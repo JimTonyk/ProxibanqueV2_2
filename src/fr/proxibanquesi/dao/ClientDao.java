@@ -10,6 +10,8 @@ public interface ClientDao {
 	void creerClient(Client client);
 
 	// *** LECTURE ***
+	
+	Client obtenirClient(int idClient);
 
 	List<Client> obtenirTousClients();
 
