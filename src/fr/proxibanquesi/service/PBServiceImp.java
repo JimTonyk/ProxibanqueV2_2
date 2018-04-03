@@ -9,6 +9,8 @@ public class PBServiceImp implements PBService {
 
 	ClientDao clientDao = new ClientDaoImp();
 
+	// *** CREATION ***
+
 	@Override
 	public void creerClient(Client client) {
 		if (client != null) {
@@ -16,9 +18,18 @@ public class PBServiceImp implements PBService {
 		}
 	}
 
+	// *** LECTURE ***
+
 	@Override
 	public List<Client> obtenirListeClients() {
 		return clientDao.obtenirTousClients();
+	}
+
+	// *** SUPPRESSION ***
+
+	@Override
+	public void supprimerClient(int idClient) {
+		clientDao.supprimerClient(idClient);
 	}
 
 }

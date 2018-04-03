@@ -66,4 +66,24 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 		return clients;
 	}
 
+	// *** SUPPRESSION ***
+
+	@Override
+	public void supprimerClient(int idClient) {
+		Connection cnx = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			cnx = this.getConnection();
+			String sql = "delete from `client` where `idclient` = ?";
+			pstmt = cnx.prepareStatement(sql);
+			pstmt.setInt(1, idClient);
+			pstmt.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			this.closeConnection(cnx, pstmt, rs);
+		}
+	}
+
 }
