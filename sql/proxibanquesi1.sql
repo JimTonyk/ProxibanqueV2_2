@@ -21,30 +21,34 @@ primary key (idclient)
 );
 
 create table comptecourant (
-numcompte int(8) zerofill,
+numcompte int(8) ,
 solde int,
 dateouverture varchar(10),
 idclient int unique,
-primary key (numcompte)
+primary key (numcompte),
+foreign key (idclient) references client(idclient)
 );
 
 create table compteepargne (
-numcompte int(8) zerofill,
+numcompte int(8) ,
 solde int,
 dateouverture varchar(10),
 tauxremun double(5, 2),
 idclient int unique,
-primary key (numcompte)
+primary key (numcompte),
+foreign key (idclient) references client(idclient)
 );
 
 create table carteelectron (
-numcarte int(8) zerofill,
-numcompte int(8),
-primary key (numcarte)
+numcarte int(8) ,
+numcompte int(8) ,
+primary key (numcarte),
+foreign key (numcompte) references comptecourant(numcompte)
 );
 
 create table cartepremier (
-numcarte int(8) zerofill,
+numcarte int(8) ,
 numcompte int(8),
-primary key (numcarte)
+primary key (numcarte),
+foreign key (numcompte) references comptecourant(numcompte)
 );
