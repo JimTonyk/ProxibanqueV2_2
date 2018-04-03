@@ -6,31 +6,35 @@ import fr.proxibanquesi.model.*;
 
 public interface PBService {
 
-	// *** CREATION ***
-
+	// *** CLIENTS ***
+	
+	// Création
+	
 	void creerClient(Client client);
 
-	// *** LECTURE ***
+	// Lecture
 	
 	Client obtenirClient(int idClient);
 
 	List<Client> obtenirListeClients();
 
-	// *** MODIFICATION ***
+	// Modification
 	
 	void modifierClient(int idClient, Client client);
 	
-	// *** SUPPRESSION ***
+	// Supression
 
 	void supprimerClient(int idClient);
 
-	// *** ASSOCIATION COMPTE ***
+	// *** COMPTES ***
+	
+	// Ajout de comptes
 
 	void associerCompteCourant(int idClient);
 
 	void associerCompteEpargne(int idClient);
 
-	// *** OBTENTION COMPTE ***
+	// Obtentions de comptes
 
 	CompteCourant obtenirCompteCourant(int idClient);
 
@@ -39,5 +43,11 @@ public interface PBService {
 	// *** OPERATIONS ***
 	
 	public double simulerCredit(double montant, int dureeMois, double taux);
+	
+	// *** CONSEILLERS ***
+	
+	// Lecture
+	
+	Conseiller obtenirConseiller(String login);
 
 }

@@ -10,8 +10,11 @@ public class PBServiceImp implements PBService {
 
 	ClientDao clientDao = new ClientDaoImp();
 	CompteDao compteDao = new CompteDaoImp();
+	ConseillerDao consDao = new ConseillerDaoImp();
 
-	// *** CREATION ***
+	// *** CLIENTS ***
+	
+	// Création
 
 	@Override
 	public void creerClient(Client client) {
@@ -20,7 +23,7 @@ public class PBServiceImp implements PBService {
 		}
 	}
 
-	// *** LECTURE ***
+	// Lecture
 
 	@Override
 	public Client obtenirClient(int idClient) {
@@ -32,21 +35,21 @@ public class PBServiceImp implements PBService {
 		return clientDao.obtenirTousClients();
 	}
 
-	// *** MODIFICATION ***
+	// Modification
 	
 	@Override
 	public void modifierClient(int idClient, Client client) {
 		clientDao.modifierClient(idClient, client);
 	}
 	
-	// *** SUPPRESSION ***
+	// Supression
 
 	@Override
 	public void supprimerClient(int idClient) {
 		clientDao.supprimerClient(idClient);
 	}
 
-	// *** ASSOCIATION COMPTE ***
+	// *** COMPTES ***
 
 	@Override
 	public void associerCompteCourant(int idClient) {
@@ -80,8 +83,6 @@ public class PBServiceImp implements PBService {
 		return sdfDate.format(date);
 	}
 
-	// *** OBTENTION COMPTES ***
-
 	@Override
 	public CompteCourant obtenirCompteCourant(int idClient) {
 		return compteDao.obtenirCompteCourant(idClient);
@@ -97,6 +98,13 @@ public class PBServiceImp implements PBService {
 	@Override
 	public double simulerCredit(double montant, int dureeMois, double taux) {
 		return (montant / dureeMois) * taux;
+	}
+
+	// *** CONSEILLERS ***
+	
+	@Override
+	public Conseiller obtenirConseiller(String login) {
+		return consDao.obtenirConseiller(login);
 	}
 
 }
