@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Que souhaitez-vous faire avec ce client ?</h1>
-<ul>
-<li>Modifier les paramètres du client (nom, prénom, adresse...)</li>
-<li><a href="SupprimerClient?idClient=${param['idClient']}">Supprimer ce client</a></li>
-</ul>
+	<h1>Que souhaitez-vous faire avec ce client ?</h1>
+	<ul>
+		<li>Modifier les paramètres du client (nom, prénom, adresse...)</li>
+		<li><a href="SupprimerClient?idClient=${param['idClient']}">Supprimer ce client</a></li>
+	</ul>
 </body>
 </html>

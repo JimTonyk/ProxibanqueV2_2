@@ -13,4 +13,8 @@ public interface ClientDao {
 
 	List<Client> obtenirTousClients();
 
+	// *** SUPPRESSION ***
+
+	void supprimerClient(int idClient);
+	
 }
