@@ -55,7 +55,7 @@ public class CreerClient extends HttpServlet {
 
 		Client client = new Client(nom, prenom, adresse, codePostal, ville, telephone);
 		pbs.creerClient(client);
-		
+
 		request.setAttribute("client", client);
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/results/creationclient.jsp");
 		rd.forward(request, response);

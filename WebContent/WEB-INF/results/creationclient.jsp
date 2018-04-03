@@ -17,6 +17,6 @@
 		<li>Téléphone : ${client.telephone}</li>
 	</ul>
 	<br>
-	<a href="${pageContext.request.servletContext.contextPath}">Retour</a>
+	<a href="creerclient.html">Retour</a>
 </body>
 </html>
