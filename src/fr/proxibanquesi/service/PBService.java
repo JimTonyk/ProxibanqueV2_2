@@ -111,14 +111,15 @@ public interface PBService {
 
 	/**
 	 * Permet de simuler un crédit à la consommation connaissant la durée et le
-	 * montant souhaité par le client. Le taux est à la discrétion du conseiller
+	 * montant souhaité par le client. Le taux est à la discrétion du conseiller.
+	 * Source : https://www.ilemaths.net/calcul-credit.php
 	 * 
 	 * @param montant
 	 *            Somme souhaitée par le client
 	 * @param dureeMois
 	 *            Durée espérée du crédit
 	 * @param taux
-	 *            Tax d'intéret du crédit (compris entre 0 et 100)
+	 *            Taux d'intéret du crédit (compris entre 0 et 100)
 	 * @return Mensualité du crédit
 	 */
 	public double simulerCredit(double montant, int dureeMois, double taux);

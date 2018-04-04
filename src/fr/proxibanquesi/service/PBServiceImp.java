@@ -99,7 +99,10 @@ public class PBServiceImp implements PBService {
 	
 	@Override
 	public double simulerCredit(double montant, int dureeMois, double taux) {
-		return (montant / dureeMois) * taux;
+		dureeMois *= -1;
+		taux /= 100;
+		double mensualite = ((montant * (taux / 12)) / (1 - Math.pow((1 + (taux / 12)), dureeMois))); 
+		return mensualite;
 	}
 	
 	@Override
