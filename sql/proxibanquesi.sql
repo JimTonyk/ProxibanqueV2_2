@@ -26,7 +26,7 @@ solde double,
 dateouverture varchar(10),
 idclient int unique,
 primary key (numcompte),
-foreign key (idclient) references client(idclient)
+foreign key (idclient) references client(idclient) on delete cascade
 );
 
 create table compteepargne (
@@ -36,19 +36,19 @@ dateouverture varchar(10),
 tauxremun double(5, 2),
 idclient int unique,
 primary key (numcompte),
-foreign key (idclient) references client(idclient)
+foreign key (idclient) references client(idclient) on delete cascade
 );
 
 create table carteelectron (
 numcarte int(8) ,
 numcompte int(8) ,
 primary key (numcarte),
-foreign key (numcompte) references comptecourant(numcompte)
+foreign key (numcompte) references comptecourant(numcompte) on delete cascade
 );
 
 create table cartepremier (
 numcarte int(8) ,
 numcompte int(8),
 primary key (numcarte),
-foreign key (numcompte) references comptecourant(numcompte)
+foreign key (numcompte) references comptecourant(numcompte) on delete cascade
 );

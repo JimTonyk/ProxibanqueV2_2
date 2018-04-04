@@ -14,9 +14,9 @@ public class DummyClients {
 	public static void main(String[] args) {
 		ClientDao clientDao = new ClientDaoImp();
 
-		Client c1 = new Client("Dupont", "Michel", "1 rue 1", "75000", "Paris", "0100000000");
-		Client c2 = new Client("Durand", "Michel", "1 rue 2", "75000", "Paris", "0100000000");
-		Client c3 = new Client("Martin", "Michel", "1 rue 3", "75000", "Paris", "0100000000");
+		Client c1 = new Client("Dupont", "Michel", "1 rue Molière", "75001", "Paris", "0100000001");
+		Client c2 = new Client("Durand", "Jean", "2 rue Racine", "75002", "Paris", "0100000002");
+		Client c3 = new Client("Martin", "Michel", "3 rue Corneille", "75003", "Paris", "0100000003");
 
 		clientDao.creerClient(c1);
 		clientDao.creerClient(c2);
