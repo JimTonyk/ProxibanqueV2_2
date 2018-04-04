@@ -3,6 +3,7 @@ package fr.proxibanquesi.presentation;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,12 +39,16 @@ public class AssocierCompteCourant extends HttpServlet {
 			throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
-
+		RequestDispatcher rd;
 		int idClient = Integer.parseInt(request.getParameter("idClient"));
 		CompteCourant compteCourant = pbs.obtenirCompteCourant(idClient);
 
+		// Récupérer les informations pour l'erreur ou la confirmation
+		request.setAttribute("compteCourant", compteCourant);
+
 		if (compteCourant != null) {
-			out.println("Ce client possède déjà un compte courant !");
+			rd = request.getRequestDispatcher("/WEB-INF/errors/erreurcomptecourant.jsp");
+			rd.forward(request, response);
 		} else {
 			pbs.associerCompteCourant(idClient);
 			out.println("Compte courant associé.");
