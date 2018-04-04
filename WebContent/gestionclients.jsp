@@ -43,7 +43,7 @@
 					</tr>
 				</c:forEach>
 			</table>
-			<br> <a href="gestionclient.jsp">Retour au menu précédent</a>
+			<br> <a href="index.jsp">Retour au menu principal</a>
 		</div>
 	</div>
 	<div id="footer">&copy;Copyright Proxibanque 2018</div>
