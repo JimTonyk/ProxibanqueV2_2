@@ -11,7 +11,7 @@
 <body>
 	<a href="creerclient.html">Créer un nouveau client</a><br>
 	<p>Sélectionner un client :</p>
-	<table>
+	<table border="1 px solid black">
 		<tr>
 			<th>ID client</th>
 			<th>Nom</th>

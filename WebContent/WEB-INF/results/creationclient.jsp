@@ -5,18 +5,57 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Proxibanque : Client ajouté à l'agence</title>
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Résumé création client</h1>
-	<ul>
-		<li>Nom : ${client.nom}</li>
-		<li>Prénom : ${client.prenom}</li>
-		<li>Adresse : ${client.adresse}</li>
-		<li>Code postal : ${client.codePostal}</li>
-		<li>Ville : ${client.ville}</li>
-		<li>Téléphone : ${client.telephone}</li>
-	</ul>
-	<br>
-	<a href="creerclient.html">Retour</a>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Le client ${client.prenom} ${client.nom} a été ajouté à
+			Proxibanque</h3>
+		<p />
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="valider.jpg" />
+		</div>
+		<div class="column2">
+			<form>
+				<fieldset>
+					<legend>
+						<b>Récapitulatif du client</b>
+					</legend>
+					<table>
+						<tr>
+							<td>Nom :</td>
+							<td>${client.nom}</td>
+						</tr>
+						<tr>
+							<td>Prénom :</td>
+							<td>${client.prenom}</td>
+						</tr>
+						<tr>
+							<td>Adresse :</td>
+							<td>${client.adresse}</td>
+						</tr>
+						<tr>
+							<td>Code Postal :</td>
+							<td>${client.codePostal}</td>
+						</tr>
+						<tr>
+							<td>Ville :</td>
+							<td>${client.ville}</td>
+						</tr>
+						<tr>
+							<td>Téléphone :</td>
+							<td>${client.telephone}
+							<td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		<a href="creerclient.html">Retour au menu "Création d'un client"</a>
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>
