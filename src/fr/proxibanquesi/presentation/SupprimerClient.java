@@ -1,14 +1,15 @@
 package fr.proxibanquesi.presentation;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.proxibanquesi.model.Client;
 import fr.proxibanquesi.service.PBService;
 import fr.proxibanquesi.service.PBServiceImp;
 
@@ -35,11 +36,19 @@ public class SupprimerClient extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
+
+		RequestDispatcher rd;
 		int idClient = Integer.parseInt(request.getParameter("idClient"));
+		
+		// Ceci servira dans la page de confirmation de suppression
+		Client client = pbs.obtenirClient(idClient);
+		request.setAttribute("clientSupprime", client);
+
+		// TODO Bug [Normal] La confirmation s'affiche même s'il y a un bug au niveau du
+		// SQL
 		pbs.supprimerClient(idClient);
-		// TODO Améliorer le retour
-		out.println("Client supprimé");
+		rd = request.getRequestDispatcher("/WEB-INF/results/clientsupprime.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
