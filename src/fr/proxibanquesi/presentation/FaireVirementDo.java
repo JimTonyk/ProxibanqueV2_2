@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.oracle.jrockit.jfr.RequestDelegate;
-
 import fr.proxibanquesi.service.PBService;
 import fr.proxibanquesi.service.PBServiceImp;
 
