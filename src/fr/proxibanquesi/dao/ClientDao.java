@@ -57,7 +57,8 @@ public interface ClientDao {
 
 	/**
 	 * Supprime un client de la base de données, sa suppression entraine par cascade
-	 * la suppression de ses comptes et de ses cartes associées
+	 * la suppression de ses comptes et de ses cartes associées.
+	 * Cette suppression par cascade, dans cette version, est gérée par la base SQL.
 	 * 
 	 * @param idClient
 	 *            Identifiant unique du client à supprimer
