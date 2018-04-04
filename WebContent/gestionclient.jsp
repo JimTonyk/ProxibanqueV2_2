@@ -31,7 +31,8 @@
 				<li><a href="SupprimerClient?idClient=${param['idClient']}">Supprimer
 						ce client</a></li>
 				<br>
-				<a href="ListerClients">Retour à la gestion clients</a>
+				<a href="ListerClients">Retour à la gestion clients</a><br>
+				<a href="index.jsp">Retour au menu principal conseillers</a>
 			</ul>
 		</div>
 	</div>

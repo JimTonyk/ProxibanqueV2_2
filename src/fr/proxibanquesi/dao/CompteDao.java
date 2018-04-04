@@ -3,7 +3,7 @@ package fr.proxibanquesi.dao;
 import fr.proxibanquesi.model.*;
 
 /**
- * Cette interface permet de réaliser les opération du CRUD sur les comptes
+ * Cette interface permet de réaliser les opérations du CRUD sur les comptes
  * courants et les comptes épargne
  * 
  * @author Anthony le Cigne et Jean-Michel Hiltbrunner
@@ -52,11 +52,19 @@ public interface CompteDao {
 	 * @return le compte épargne détenu par le client
 	 */
 	CompteEpargne obtenirCompteEpargne(int idClient);
-	
+
 	// *** MODIFICATION ***
-	
-	// TODO Documentation
-	
+
+	/**
+	 * Permet de modifier les caractéristiques d'un compte courant (en particulier
+	 * le solde) connu à partir de son identifiant client
+	 * 
+	 * @param idClient
+	 *            Identifiant unique du client dont on souhaite modifier les données
+	 *            du compte
+	 * @param compteCourant
+	 *            Compte où l'on souhaite altérer les données
+	 */
 	void modifierCompteCourant(int idClient, CompteCourant compteCourant);
-	
+
 }

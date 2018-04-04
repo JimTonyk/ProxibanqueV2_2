@@ -4,19 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proxibanque : Association de compte courant</title>
+<title>Proxibanque : Association de compte épargne</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Compte courant associé.</h3>
+		<h3>Compte épargne associé.</h3>
 	</div>
 	<div id="content">
-		<div class="article column1">
+		<div class="column1">
 			<img alt="" src="associer-compte.jpg" />
 		</div>
-		<div class="article column2" align="center">
+		<div class="column2" align="center">
 			<p>Résumé de création du compte :</p>
 			<form>
 				<fieldset>
@@ -26,15 +26,15 @@
 					<table>
 						<tr>
 							<td>Numéro de compte :</td>
-							<td>${compteCourant.numeroCompte}</td>
+							<td>${compteEpargne.numeroCompte}</td>
 						</tr>
 						<tr>
 							<td>Solde :</td>
-							<td>${compteCourant.solde}</td>
+							<td>${compteEpargne.solde}</td>
 						</tr>
 						<tr>
 							<td>Date d'ouverture :</td>
-							<td>${compteCourant.dateOuverture}</td>
+							<td>${compteEpargne.dateOuverture}</td>
 						</tr>
 					</table>
 				</fieldset>

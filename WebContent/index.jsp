@@ -8,23 +8,24 @@
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<body>
-	<div id="header">
-		<img alt="" src="banner.jpeg" />
-		<h1>Bienvenue chez Proxibanque !</h1>
-		<div id="nav">
-			<ul>
-				<li><a href="ListerClients">Gestion des clients</a></li>
-				<li><a href="operations.html">Operations bancaires</a></li>
-			</ul>
+	<center>
+		<div id="header">
+			<img alt="" src="banner.jpeg" />
+			<h1>Bienvenue chez Proxibanque !</h1>
+			<div id="nav">
+				<ul>
+					<li><a href="ListerClients">Gestion des clients</a></li>
+					<li><a href="operations.html">Operations bancaires</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div id="content">
-	<h1>Bienvenue, ${conseillerSession.prenom} ${conseillerSession.nom}
-		(${conseillerSession.login})</h1>
-	<p>Voici les infos du jour concernant Proxibanque :</p>
-	<h3>Toute l'équipe Proxibanque vous souhaite une bonne journée !</h3>
-	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+		<div id="content">
+			<h1>Bienvenue, ${conseillerSession.prenom}
+				${conseillerSession.nom} (${conseillerSession.login})</h1>
+			<p>Voici les infos du jour concernant Proxibanque :</p>
+			<h3>Toute l'équipe Proxibanque vous souhaite une bonne journée !</h3>
+		</div>
+		<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	</center>
 </body>
 </html>

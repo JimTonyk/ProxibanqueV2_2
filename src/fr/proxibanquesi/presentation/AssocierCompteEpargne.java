@@ -3,6 +3,7 @@ package fr.proxibanquesi.presentation;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +21,7 @@ public class AssocierCompteEpargne extends HttpServlet {
 	
 	private PBService pbs = new PBServiceImp();
 	private static final long serialVersionUID = 1L;
+	private RequestDispatcher rd = null;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -43,7 +45,11 @@ public class AssocierCompteEpargne extends HttpServlet {
 			out.println("Ce client possède déjà un compte épargne !");
 		} else {
 			pbs.associerCompteEpargne(idClient);
-			out.println("Compte épargne associé.");
+			compteEpargne = pbs.obtenirCompteEpargne(idClient);
+			request.setAttribute("compteEpargne", compteEpargne);
+			rd = request.getRequestDispatcher("/WEB-INF/results/compteepargneassocie.jsp");
+			rd.forward(request, response);
+//			out.println("Compte épargne associé.");
 		}
 		
 //		Compte compte = compteService.obtenirCompte(idClient);

@@ -1,6 +1,5 @@
 package fr.proxibanquesi.model;
 
-import java.util.ArrayList;
 
 /**
  * Cette classe décrit les caractéristiques des conseillers ProxiBanque.

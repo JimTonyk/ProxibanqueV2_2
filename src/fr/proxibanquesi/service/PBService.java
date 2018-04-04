@@ -124,7 +124,21 @@ public interface PBService {
 	 */
 	public double simulerCredit(double montant, int dureeMois, double taux);
 
-	// TODO Documentation
+	/**
+	 * Cette méthode permet de réaliser un virement d'argent entre deux comptes
+	 * bancaires. Le virement est possible si le solde résultant n'atteint pas le
+	 * montant du découvert autorisé
+	 * 
+	 * @param idClientSrc
+	 *            Identifiant unique du premier client dont on souhaite débiter le
+	 *            compte
+	 * @param idClientDest
+	 *            Identifiant unique du second client dont on souhaite créditer le
+	 *            compte
+	 * @param montant
+	 *            Somme d'argent transférée pendant le virement (décimales
+	 *            autorisées)
+	 */
 
 	public void faireVirement(int idClientSrc, int idClientDest, double montant);
 

@@ -5,12 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 import fr.proxibanquesi.model.Client;
 
+/**
+ * Cette classe développe les méthodes des interfaces permettant de réaliser les
+ * opérations du CRUD coté client
+ * 
+ * @author Anthony le Cigne et Jean-Michel Hiltbrunner
+ *
+ */
 public class ClientDaoImp extends DaoJDBC implements ClientDao {
 
 	// *** CREATION ***
 
-	/* (non-Javadoc)
-	 * @see fr.proxibanquesi.dao.ClientDao#creerClient(fr.proxibanquesi.model.Client)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * fr.proxibanquesi.dao.ClientDao#creerClient(fr.proxibanquesi.model.Client)
 	 */
 	@Override
 	public void creerClient(Client client) {

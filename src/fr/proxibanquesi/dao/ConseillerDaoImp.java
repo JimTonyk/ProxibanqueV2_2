@@ -3,6 +3,11 @@ package fr.proxibanquesi.dao;
 import java.sql.*;
 import fr.proxibanquesi.model.Conseiller;
 
+/**
+ * Cette classe développe la méthode permettant d'obtenir les renseignements sur un conseiller à partir de son identifiant unique.
+ * @author Anthony le Cigne et Jean-Michel Hiltbrunner
+ *
+ */
 public class ConseillerDaoImp extends DaoJDBC implements ConseillerDao {
 
 	@Override

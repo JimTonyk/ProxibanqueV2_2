@@ -20,7 +20,9 @@
 		<div class="article column2" align="center">
 			<form>
 				<fieldset>
-					<legend><b>Etat civil</b></legend>
+					<legend>
+						<b>Etat civil</b>
+					</legend>
 					<table>
 						<tr>
 							<td>ID :</td>
@@ -57,7 +59,9 @@
 			<br>
 			<form>
 				<fieldset>
-					<legend><b>Compte courant</b></legend>
+					<legend>
+						<b>Compte courant</b>
+					</legend>
 					<table>
 						<tr>
 							<td>Numéro de compte :</td>
@@ -77,7 +81,9 @@
 			<br>
 			<form>
 				<fieldset>
-					<legend><b>Compte épargne</b></legend>
+					<legend>
+						<b>Compte épargne</b>
+					</legend>
 					<table>
 						<tr>
 							<td>Numéro de compte :</td>
@@ -98,6 +104,7 @@
 					</table>
 				</fieldset>
 			</form>
+			<a href="gestionclient.jsp">Retour au menu précédent</a>
 		</div>
 	</div>
 </body>

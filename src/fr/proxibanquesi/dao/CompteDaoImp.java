@@ -6,6 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import fr.proxibanquesi.model.*;
 
+/**
+ * Cette classe développe les méthodes décrites dans l'interface CompteDao afin
+ * de réaliser les opérations du CRUD sur les Comptes courants et les comptes
+ * épargnes
+ * 
+ * @author Anthony le Cigne et Jean-Michel Hiltbrunner
+ *
+ */
 public class CompteDaoImp extends DaoJDBC implements CompteDao {
 
 	@Override

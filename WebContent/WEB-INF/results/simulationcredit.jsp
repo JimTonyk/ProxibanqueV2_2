@@ -18,7 +18,7 @@
 			<img alt="" src="credit.jpg" />
 		</div>
 		<div class="column2">
-			<p>Votre mensualité est de : ${mensualite} euros.</p>
+			<p>Votre mensualité est de : ${mensualite} &euro;.</p>
 			<a href="operations.html"> Retour à la liste des opérations
 				bancaires</a>
 		</div>
