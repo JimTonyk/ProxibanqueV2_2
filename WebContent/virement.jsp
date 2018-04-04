@@ -5,41 +5,65 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Proxibanque : Réalisation d'un virement de compte à
+	compte</title>
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<form action="FaireVirementDo" method="post">
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h1>Virement de compte à compte</h1>
+		<p />
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="virement.jpg" />
+		</div>
+		<div class="column2">
+			<form action="FaireVirementDo" method="post">
 
-		<fieldset>
-			<legend>Choisissez un client source</legend>
-			<select name="idClientSrc">
-				<c:forEach items="${allClients}" var="currentClient">
-					<option value="${currentClient.idClient}">
-						${currentClient.idClient}
-						${currentClient.prenom}
-						${currentClient.nom}</option>
-				</c:forEach>
-			</select>
-		</fieldset>
+				<fieldset>
+					<legend>
+						<b>Choisissez un client débiteur</b>
+					</legend>
+					<select name="idClientSrc">
+						<c:forEach items="${allClients}" var="currentClient">
+							<option value="${currentClient.idClient}">
+								${currentClient.idClient} ${currentClient.prenom}
+								${currentClient.nom}</option>
+						</c:forEach>
+					</select>
+				</fieldset>
 
-		<fieldset>
-			<legend>Choisissez un client source</legend>
-			<select name="idClientDest">
-				<c:forEach items="${allClients}" var="currentClient">
-					<option value="${currentClient.idClient}">
-						${currentClient.idClient}
-						${currentClient.prenom}
-						${currentClient.nom}</option>
-				</c:forEach>
-			</select>
-		</fieldset>
-		
-		<fieldset>
-		<legend>Indiquez un montant</legend>
-			Montant (euros): <input type="text" name="montantVirement" placeholder="Montant (euros)"><br>
-			<input type="submit" value="Envoyer"> <input type="reset" value="Reset">
-		</fieldset>
+				<fieldset>
+					<legend>
+						<b>Choisissez un client créditeur</b>
+					</legend>
+					<select name="idClientDest">
+						<c:forEach items="${allClients}" var="currentClient">
+							<option value="${currentClient.idClient}">
+								${currentClient.idClient} ${currentClient.prenom}
+								${currentClient.nom}</option>
+						</c:forEach>
+					</select>
+				</fieldset>
 
-	</form>
+				<fieldset>
+					<legend>
+						<b>Indiquez un montant</b>
+					</legend>
+					Montant (euros): <input type="text" name="montantVirement"
+						placeholder="Montant (euros)"> <br> <br> <input
+						type="submit" value="Envoyer"> <input type="reset"
+						value="Reset">
+				</fieldset>
+
+			</form>
+			<a href="operations.html"> Retour à la liste des opérations
+				bancaires</a>
+
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>

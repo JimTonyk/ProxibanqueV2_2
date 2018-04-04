@@ -25,29 +25,29 @@
 					<table>
 						<tr>
 							<td>Nom :</td>
-							<td><input type="text" name="nom" placeholder="Nom"></td>
+							<td><input type="text" name="nom" value="${client.nom}"></td>
 						</tr>
 						<tr>
 							<td>Prénom :</td>
-							<td><input type="text" name="prenom" placeholder="Prénom"></td>
+							<td><input type="text" name="prenom" value="${client.prenom}"></td>
 						</tr>
 						<tr>
 							<td>Adresse :</td>
-							<td><input type="text" name="adresse" placeholder="Adresse"></td>
+							<td><input type="text" name="adresse" value="${client.adresse}"></td>
 						</tr>
 						<tr>
 							<td>Code Postal :</td>
 							<td><input type="text" name="codePostal"
-								placeholder="Code postal"></td>
+								value="${client.codePostal}"></td>
 						</tr>
 						<tr>
 							<td>Ville :</td>
-							<td><input type="text" name="ville" placeholder="Ville"></td>
+							<td><input type="text" name="ville" value="${client.ville}"></td>
 						</tr>
 						<tr>
 							<td>Téléphone :</td>
 							<td><input type="text" name="telephone"
-								placeholder="Téléphone">
+								value="${client.telephone}">
 							<td>
 						</tr>
 						<tr>
@@ -58,6 +58,7 @@
 					</table>
 				</fieldset>
 			</form>
+		<a href="gestionclients.jsp"> Retour à la liste des clients</a>
 		</div>
 	</div>
 	<div id="footer">&copy;Copyright Proxibanque 2018</div>

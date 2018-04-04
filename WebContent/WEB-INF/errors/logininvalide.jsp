@@ -4,13 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Proxibanque : Conseiller inconnu</title>
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="error">
-		Echec authentification conseiller : le login <b>${param['login']}</b> n'existe pas.<br>
-		Veuillez vérifier votre login auprès de votre agence ProxiBanque.
-	</div><br>
-	<a href="login.html">Retour à la page de login</a>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Erreur de création de compte courant !</h3>
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="erreur.gif" />
+		</div>
+		<div class="column2" align="center">
+			<p>
+				Echec authentification conseiller : le login <b>${param['login']}</b>
+				n'existe pas.<br> Veuillez vérifier votre login auprès de votre
+				agence ProxiBanque.
+			</p>
+			<a href="login.html">Retour à la page de login</a>
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<br>
 </body>
 </html>

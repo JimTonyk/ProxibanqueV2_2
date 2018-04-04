@@ -62,5 +62,6 @@
 			<a href="ListerClients">Retour au menu de gestion des clients</a>
 		</div>
 	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>

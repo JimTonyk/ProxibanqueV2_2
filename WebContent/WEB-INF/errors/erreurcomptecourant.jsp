@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Erreur</title>
+<title>Proxibanque : Erreur, le client possède déjà un compte courant</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
 	</div>
 	<div id="content">
 		<div class="article column1">
-			<img alt="" src="info-client.png" />
+			<img alt="" src="erreur.gif" />
 		</div>
 		<div class="article column2" align="center">
 			<p>Ce client possède déjà le compte courant suivant :</p>
@@ -39,8 +39,9 @@
 					</table>
 				</fieldset>
 			</form>
-			<a href="ListerClients">Retour à la gestion clients</a>
+			<a href="virement.jsp">Retour à l'écran des virements</a>
 		</div>
 	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>

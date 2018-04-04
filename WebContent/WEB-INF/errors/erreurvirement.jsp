@@ -4,9 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link href="style.css" rel="stylesheet">
+<title>Proxibanque : Erreur lors de la réalisation du virement</title>
 </head>
 <body>
-	<div class="error">La source (${param['idClientSrc']}) et la destination (${param['idClientSrc']}) sont identiques !</div>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Erreur lors de la réalisation du virement !</h3>
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="erreur.gif" />
+		</div>
+		<div class="column2" align="center">
+			La source (${param['idClientSrc']}) et la destination (${param['idClientSrc']}) sont identiques !
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>

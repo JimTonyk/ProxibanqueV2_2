@@ -4,14 +4,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Proxibanque : Erreur d'identification du conseiller</title>
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="error">
-		Echec authentification conseiller : le mot de passe entré ne correspond pas au login <b>${param['login']}</b>.<br>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Erreur lors de la réalisation du virement !</h3>
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="erreur.gif" />
+		</div>
+		<div class="column2" align="center">
+			<p>Echec authentification conseiller : le mot de passe entré ne correspond pas au login <b>${param['login']}</b>.<br>
 		Veuillez vérifier votre mot de passe auprès de votre agence ProxiBanque.<br>
-		Cet incident sera signalé.
-	</div><br>
-	<a href="login.html">Retour à la page de login</a>
+		Cet incident sera signalé.</p>
+			<a href="login.html">Retour à la page de login</a>
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>
