@@ -4,6 +4,11 @@ import fr.proxibanquesi.dao.ClientDao;
 import fr.proxibanquesi.dao.ClientDaoImp;
 import fr.proxibanquesi.model.Client;
 
+/**
+ * Permet d'ajouter 3 clients basiques pour les opérations de test
+ * @author Anthony le Cigne et Jean-Mchel Hiltbrunner
+ *
+ */
 public class DummyClients {
 
 	public static void main(String[] args) {

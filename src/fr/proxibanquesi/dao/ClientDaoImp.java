@@ -9,6 +9,9 @@ public class ClientDaoImp extends DaoJDBC implements ClientDao {
 
 	// *** CREATION ***
 
+	/* (non-Javadoc)
+	 * @see fr.proxibanquesi.dao.ClientDao#creerClient(fr.proxibanquesi.model.Client)
+	 */
 	@Override
 	public void creerClient(Client client) {
 		Connection cnx = null;
