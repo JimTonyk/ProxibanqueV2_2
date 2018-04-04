@@ -20,8 +20,8 @@
 		</div>
 	</div>
 	<div id="content">
-	<h1>Bienvenue, ${conseiller.prenom} ${conseiller.nom}
-		(${conseiller.login})</h1>
+	<h1>Bienvenue, ${conseillerSession.prenom} ${conseillerSession.nom}
+		(${conseillerSession.login})</h1>
 	<p>Voici les infos du jour concernant Proxibanque :</p>
 	<h3>Toute l'équipe Proxibanque vous souhaite une bonne journée !</h3>
 	</div>

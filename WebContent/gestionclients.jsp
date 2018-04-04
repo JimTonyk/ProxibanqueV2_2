@@ -9,7 +9,8 @@
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<a href="creerclient.html">Créer un nouveau client</a><br><br>
+	<a href="creerclient.html">Créer un nouveau client</a><br>
+	<p>Sélectionner un client :</p>
 	<table>
 		<tr>
 			<th>ID client</th>
@@ -31,6 +32,7 @@
 				<td>${currentClient.telephone}</td>
 			</tr>
 		</c:forEach>
-	</table>
+	</table><br>
+	<a href="index.jsp">Retour au menu principal</a>
 </body>
 </html>

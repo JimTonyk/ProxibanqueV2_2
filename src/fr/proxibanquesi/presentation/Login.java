@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import fr.proxibanquesi.model.Conseiller;
 import fr.proxibanquesi.service.PBService;
@@ -47,26 +48,30 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		PrintWriter out = response.getWriter();
-		
+
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
-		
+
 		Conseiller conseiller = pbs.obtenirConseiller(login);
 		request.setAttribute("conseiller", conseiller);
-		
-		RequestDispatcher dispatcher;
-		
-		String error = "Echec authentification conseiller : %s. Essayer à nouveau.";
-		
+
+		RequestDispatcher rd;
+		HttpSession session = request.getSession();
+		session.setMaxInactiveInterval(20 * 60); // Session de 20 minutes par défaut
+
+		session.setAttribute("conseillerSession", conseiller);
+
+		// TODO Les appels aux pages d'erreurs relatives au conseiller pourraient
+		// utiliser la session
 		if (conseiller == null) {
-			out.println(String.format(error, "login invalide"));
+			rd = request.getRequestDispatcher("/WEB-INF/errors/logininvalide.jsp");
+			rd.forward(request, response);
 		} else if (password.equals(conseiller.getPassword())) {
-			dispatcher = request.getRequestDispatcher("index.jsp");
-			dispatcher.forward(request, response);
+			rd = request.getRequestDispatcher("index.jsp");
+			rd.forward(request, response);
 		} else {
-			out.println(String.format(error, "mot de passe invalide"));
+			rd = request.getRequestDispatcher("/WEB-INF/errors/pwdinvalide.jsp");
+			rd.forward(request, response);
 		}
 
 	}
