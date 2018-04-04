@@ -10,7 +10,7 @@
 <body>
 <body>
 	<div id="header">
-		<img alt="" src="banner.jpg" />
+		<img alt="" src="banner.jpeg" />
 		<h1>Bienvenue chez Proxibanque !</h1>
 		<div id="nav">
 			<ul>

@@ -8,28 +8,97 @@
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Etat civil</h1>
-	<ul>
-		<li>ID : ${client.idClient}</li>
-		<li>Nom : ${client.nom}</li>
-		<li>Prenom : ${client.prenom}</li>
-		<li>Adresse : ${client.adresse}</li>
-		<li>Code Postal : ${client.codePostal}</li>
-		<li>Ville : ${client.ville}</li>
-		<li>Téléphone : ${client.telephone}</li>
-	</ul>
-	<h1>Compte courant</h1>
-	<ul>
-		<li>Numéro de compte : ${compteCourant.numeroCompte}</li>
-		<li>Solde : ${compteCourant.solde}</li>
-		<li>Date d'ouverture : ${compteCourant.dateOuverture}</li>
-	</ul>
-	<h1>Compte épargne</h1>
-	<ul>
-		<li>Numéro de compte : ${compteEpargne.numeroCompte}</li>
-		<li>Solde : ${compteEpargne.solde}</li>
-		<li>Date d'ouverture : ${compteEpargne.dateOuverture}</li>
-		<li>Taux d'intérêt à l'ouverture : ${compteEpargne.tauxRemun}</li>
-	</ul>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h3>Informations relatives au client ${client.nom}
+			${client.prenom}</h3>
+	</div>
+	<div id="content">
+		<div class="article column1">
+			<img alt="" src="info-client.png" />
+		</div>
+		<div class="article column2" align="center">
+			<form>
+				<fieldset>
+					<legend><b>Etat civil</b></legend>
+					<table>
+						<tr>
+							<td>ID :</td>
+							<td>${client.idClient}</td>
+						</tr>
+						<tr>
+							<td>Nom :</td>
+							<td>${client.nom}</td>
+						</tr>
+						<tr>
+							<td>Prenom :</td>
+							<td>${client.prenom}</td>
+						</tr>
+						<tr>
+							<td>Adresse :</td>
+							<td>${client.adresse}</td>
+						</tr>
+						<tr>
+							<td>Code Postal :</td>
+							<td>${client.codePostal}</td>
+						</tr>
+						<tr>
+							<td>Ville :</td>
+							<td>${client.ville}
+							<td>
+						</tr>
+						<tr>
+							<td>Téléphone :</td>
+							<td>${client.telephone}</td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+			<br>
+			<form>
+				<fieldset>
+					<legend><b>Compte courant</b></legend>
+					<table>
+						<tr>
+							<td>Numéro de compte :</td>
+							<td>${compteCourant.numeroCompte}</td>
+						</tr>
+						<tr>
+							<td>Solde :</td>
+							<td>${compteCourant.solde}</td>
+						</tr>
+						<tr>
+							<td>Date d'ouverture :</td>
+							<td>${compteCourant.dateOuverture}</td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+			<br>
+			<form>
+				<fieldset>
+					<legend><b>Compte épargne</b></legend>
+					<table>
+						<tr>
+							<td>Numéro de compte :</td>
+							<td>${compteEpargne.numeroCompte}</td>
+						</tr>
+						<tr>
+							<td>Solde :</td>
+							<td>${compteEpargne.solde}</td>
+						</tr>
+						<tr>
+							<td>Date d'ouverture :</td>
+							<td>${compteEpargne.dateOuverture}</td>
+						</tr>
+						<tr>
+							<td>Taux d'intérêt à l'ouverture :</td>
+							<td>${compteEpargne.tauxRemun}%</td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

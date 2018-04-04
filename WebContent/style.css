@@ -63,7 +63,7 @@ body{
 	margin: 0px auto;
 }
 
-li{
+.nav>li{
 	display: inline;
 	padding: 5px;
 }
@@ -77,9 +77,15 @@ a{
 	height: 100%;
 }
 
-.column1, .column2, .column3{
-	background-color: lightblue;
+.column1{
 	width: 300px;
+	float: left;
+	margin: 10px;
+}
+
+.column2{
+	background-color: rgb(192,216,180);
+	width: 500px;
 	float: left;
 	margin: 10px;
 }
