@@ -38,20 +38,22 @@ public class AssocierCompteCourant extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
 		RequestDispatcher rd;
 		int idClient = Integer.parseInt(request.getParameter("idClient"));
 		CompteCourant compteCourant = pbs.obtenirCompteCourant(idClient);
 
-		// Récupérer les informations pour l'erreur ou la confirmation
-		request.setAttribute("compteCourant", compteCourant);
-
 		if (compteCourant != null) {
+			// Récupérer les informations du compte pour l'erreur
+			request.setAttribute("compteCourant", compteCourant);
 			rd = request.getRequestDispatcher("/WEB-INF/errors/erreurcomptecourant.jsp");
 			rd.forward(request, response);
 		} else {
 			pbs.associerCompteCourant(idClient);
-			out.println("Compte courant associé.");
+			// Récupérer le compte désormais créé
+			compteCourant = pbs.obtenirCompteCourant(idClient);
+			request.setAttribute("compteCourant", compteCourant);
+			rd = request.getRequestDispatcher("/WEB-INF/results/comptecourantassocie.jsp");
+			rd.forward(request, response);
 		}
 	}
 

@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proxibanque : Erreur, le client possède déjà un compte courant</title>
+<title>Association de compte courant</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Erreur de création de compte courant !</h3>
+		<h3>Compte courant associé.</h3>
 	</div>
 	<div id="content">
 		<div class="article column1">
-			<img alt="" src="erreur.gif" />
+			<img alt="" src="associer-compte.jpg" />
 		</div>
 		<div class="article column2" align="center">
-			<p>Ce client possède déjà le compte courant suivant :</p>
+			<p>Résumé de création du compte :</p>
 			<form>
 				<fieldset>
 					<legend>
