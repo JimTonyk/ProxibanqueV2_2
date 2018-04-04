@@ -29,7 +29,7 @@ public class CompteDaoImp extends DaoJDBC implements CompteDao {
 			this.closeConnection(cnx, pstmt, rs);
 		}
 	}
-	
+
 	@Override
 	public void creerCompteEpargne(CompteEpargne compteEpargne) {
 		Connection cnx = null;
@@ -65,15 +65,15 @@ public class CompteDaoImp extends DaoJDBC implements CompteDao {
 			pstmt = cnx.prepareStatement(sql);
 			pstmt.setInt(1, idClient);
 			rs = pstmt.executeQuery();
-			
+
 			if (rs.next()) {
 				int numcompte = rs.getInt(1);
 				double solde = rs.getInt(2);
 				String datecreation = rs.getString(3);
 				int idclient = rs.getInt(4);
-				compteCourant = new CompteCourant(numcompte, solde, datecreation, idclient);				
+				compteCourant = new CompteCourant(numcompte, solde, datecreation, idclient);
 			}
-			
+
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -81,7 +81,7 @@ public class CompteDaoImp extends DaoJDBC implements CompteDao {
 		}
 		return compteCourant;
 	}
-	
+
 	@Override
 	public CompteEpargne obtenirCompteEpargne(int idClient) {
 		Connection cnx = null;
@@ -94,7 +94,7 @@ public class CompteDaoImp extends DaoJDBC implements CompteDao {
 			pstmt = cnx.prepareStatement(sql);
 			pstmt.setInt(1, idClient);
 			rs = pstmt.executeQuery();
-			
+
 			if (rs.next()) {
 				int numcompte = rs.getInt(1);
 				double solde = rs.getInt(2);
@@ -104,13 +104,36 @@ public class CompteDaoImp extends DaoJDBC implements CompteDao {
 				compteEpargne = new CompteEpargne(numcompte, solde, datecreation, idclient);
 				compteEpargne.setTauxRemun(tauxremun);
 			}
-			
+
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		} finally {
 			this.closeConnection(cnx, pstmt, rs);
 		}
 		return compteEpargne;
+	}
+
+	@Override
+	public void modifierCompteCourant(int idClient, CompteCourant compteCourant) {
+		Connection cnx = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			cnx = this.getConnection();
+			String sql = "update `comptecourant` set `numcompte`= ?, `solde`= ?,"
+					+ " `dateouverture`= ? where `idclient`= ?";
+			pstmt = cnx.prepareStatement(sql);
+			pstmt.setInt(1, compteCourant.getNumeroCompte());
+			pstmt.setDouble(2, compteCourant.getSolde());
+			pstmt.setString(3, compteCourant.getDateOuverture());
+			pstmt.setInt(4, idClient);
+			pstmt.executeUpdate();
+		} catch (SQLException | ClassNotFoundException ex) {
+			ex.printStackTrace();
+		} finally {
+			this.closeConnection(cnx, pstmt, rs);
+		}
+
 	}
 
 }

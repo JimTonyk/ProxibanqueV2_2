@@ -3,6 +3,8 @@ package fr.proxibanquesi.service;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import fr.proxibanquesi.model.CompteCourant;
 import fr.proxibanquesi.dao.*;
 import fr.proxibanquesi.model.*;
 
@@ -98,6 +100,27 @@ public class PBServiceImp implements PBService {
 	@Override
 	public double simulerCredit(double montant, int dureeMois, double taux) {
 		return (montant / dureeMois) * taux;
+	}
+	
+	@Override
+	public void faireVirement(int idClientSrc, int idClientDest, double montant) {
+		CompteCourant compteSrc = compteDao.obtenirCompteCourant(idClientSrc);
+		CompteCourant compteDest = compteDao.obtenirCompteCourant(idClientDest);
+		
+		double soldeSrc = compteSrc.getSolde();
+		double soldeDest = compteDest.getSolde();
+
+		if (soldeSrc - montant > CompteCourant.DECOUVERT_MAX) {
+			compteSrc.setSolde(soldeSrc - montant);
+			compteDest.setSolde(soldeDest + montant);
+		} else {
+			// TODO Faire une erreur plus élaborée - throw ?
+			System.err.println("Dépassement du découvert autorisé !");
+		}
+		
+		compteDao.modifierCompteCourant(idClientSrc, compteSrc);
+		compteDao.modifierCompteCourant(idClientDest, compteDest);
+		
 	}
 
 	// *** CONSEILLERS ***

@@ -123,6 +123,10 @@ public interface PBService {
 	 */
 	public double simulerCredit(double montant, int dureeMois, double taux);
 
+	// TODO Documentation
+
+	public void faireVirement(int idClientSrc, int idClientDest, double montant);
+
 	// *** CONSEILLERS ***
 
 	// Lecture

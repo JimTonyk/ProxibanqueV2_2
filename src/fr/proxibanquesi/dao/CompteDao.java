@@ -52,5 +52,11 @@ public interface CompteDao {
 	 * @return le compte épargne détenu par le client
 	 */
 	CompteEpargne obtenirCompteEpargne(int idClient);
-
+	
+	// *** MODIFICATION ***
+	
+	// TODO Documentation
+	
+	void modifierCompteCourant(int idClient, CompteCourant compteCourant);
+	
 }
