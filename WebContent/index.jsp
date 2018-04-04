@@ -25,6 +25,6 @@
 	<p>Voici les infos du jour concernant Proxibanque :</p>
 	<h3>Toute l'équipe Proxibanque vous souhaite une bonne journée !</h3>
 	</div>
-	<div id="footer">&copy;Copyright 2018</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>

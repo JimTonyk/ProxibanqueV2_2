@@ -5,22 +5,61 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Proxibanque : modification d'un client</title>
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<form action="ModifierClient?idClient=${client.idClient}" method="post">
-		<fieldset>
-			<legend>Infos client</legend>
-			<table>
-			
-			Nom : <input type="text" name="nom" value="${client.nom}"><br>
-			Prénom : <input type="text" name="prenom" value="${client.prenom}"><br>
-			Adresse : <input type="text" name="adresse" value="${client.adresse}"><br>
-			Code Postal : <input type="text" name="codePostal" value="${client.codePostal}"><br>
-			Ville : <input type="text" name="ville" value="${client.ville}"><br>
-			Téléphone :<input type="text" name="telephone" value="${client.telephone}"><br>
-			<input type="submit" value="Envoyer"> <input type="reset" value="Reset">
-			</table>
-		</fieldset>
-	</form>
+	<div id="header">
+		<img alt="" src="banner.jpeg" />
+		<h1>Mise à jour des données du client</h1>
+		<p />
+	</div>
+	<div id="content">
+		<div class="column1">
+			<img alt="" src="client-update.jpg" />
+		</div>
+		<div class="column2">
+			<form action="ModifierClient?idClient=${client.idClient}"
+				method="post">
+				<fieldset>
+					<legend><b>Infos client</b></legend>
+					<table>
+						<tr>
+							<td>Nom :</td>
+							<td><input type="text" name="nom" placeholder="Nom"></td>
+						</tr>
+						<tr>
+							<td>Prénom :</td>
+							<td><input type="text" name="prenom" placeholder="Prénom"></td>
+						</tr>
+						<tr>
+							<td>Adresse :</td>
+							<td><input type="text" name="adresse" placeholder="Adresse"></td>
+						</tr>
+						<tr>
+							<td>Code Postal :</td>
+							<td><input type="text" name="codePostal"
+								placeholder="Code postal"></td>
+						</tr>
+						<tr>
+							<td>Ville :</td>
+							<td><input type="text" name="ville" placeholder="Ville"></td>
+						</tr>
+						<tr>
+							<td>Téléphone :</td>
+							<td><input type="text" name="telephone"
+								placeholder="Téléphone">
+							<td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Envoyer" /> <input
+								type="reset" value="Reset" /></td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id="footer">&copy;Copyright Proxibanque 2018</div>
 </body>
 </html>
