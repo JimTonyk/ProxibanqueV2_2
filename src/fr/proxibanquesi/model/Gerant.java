@@ -3,7 +3,7 @@ package fr.proxibanquesi.model;
 /**
  * Cette classe décrit les caractéristiques des gérants d'agence ProxiBanque.
  * 
- * @author Joumard Sébastien, Le Cigne Anthony
+ * @author Jean-Michel Hiltbrunner, Anthony Le Cigne
  *
  */
 

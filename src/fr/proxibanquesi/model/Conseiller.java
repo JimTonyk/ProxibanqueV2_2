@@ -4,7 +4,7 @@ package fr.proxibanquesi.model;
 /**
  * Cette classe décrit les caractéristiques des conseillers ProxiBanque.
  * 
- * @author Joumard Sébastien, Le Cigne Anthony
+ * @author Jean-Michel Hiltbrunner, Anthony Le Cigne
  *
  */
 
