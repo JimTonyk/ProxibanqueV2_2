@@ -3,6 +3,7 @@ package fr.proxibanquesi.presentation;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,7 +45,7 @@ public class ModifierClient extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int idClient = Integer.parseInt(request.getParameter("idClient"));
 		
-		PrintWriter out = response.getWriter();
+		RequestDispatcher rd;
 		
 		String nom = request.getParameter("nom");
 		String prenom = request.getParameter("prenom");
@@ -56,7 +57,9 @@ public class ModifierClient extends HttpServlet {
 		Client client = new Client(nom, prenom, adresse, codePostal, ville, telephone);
 		pbs.modifierClient(idClient, client);
 		
-		out.println("Client modifié");
+		request.setAttribute("clientModifie", client);
+		rd = request.getRequestDispatcher("/WEB-INF/results/clientmodifie.jsp");
+		rd.forward(request, response);
 		
 		
 	}
