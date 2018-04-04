@@ -4,14 +4,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Proxibanque : menu conseiller</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Bienvenue, ${conseiller.prenom} ${conseiller.nom} (${conseiller.login})</h1>
-	<ul>
-		<li><a href="ListerClients">Gestion des clients</a></li>
-		<li><a href="operations.html">Operations bancaires</a></li>
-	</ul>
+<body>
+	<div id="header">
+		<img alt="" src="banner.jpg" />
+		<h1>Bienvenue chez Proxibanque !</h1>
+		<div id="nav">
+			<ul>
+				<li><a href="ListerClients">Gestion des clients</a></li>
+				<li><a href="operations.html">Operations bancaires</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+	<h1>Bienvenue, ${conseiller.prenom} ${conseiller.nom}
+		(${conseiller.login})</h1>
+	<p>Voici les infos du jour concernant Proxibanque :</p>
+	<h3>Toute l'équipe Proxibanque vous souhaite une bonne journée !</h3>
+	</div>
+	<div id="footer">&copy;Copyright 2018</div>
 </body>
 </html>

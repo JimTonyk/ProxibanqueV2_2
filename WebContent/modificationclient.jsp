@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Proxibanque : modification d'un client</title>
 </head>
 <body>
 	<form action="ModifierClient?idClient=${client.idClient}" method="post">
 		<fieldset>
 			<legend>Infos client</legend>
+			<table>
+			
 			Nom : <input type="text" name="nom" value="${client.nom}"><br>
 			Prénom : <input type="text" name="prenom" value="${client.prenom}"><br>
 			Adresse : <input type="text" name="adresse" value="${client.adresse}"><br>
@@ -17,6 +19,7 @@
 			Ville : <input type="text" name="ville" value="${client.ville}"><br>
 			Téléphone :<input type="text" name="telephone" value="${client.telephone}"><br>
 			<input type="submit" value="Envoyer"> <input type="reset" value="Reset">
+			</table>
 		</fieldset>
 	</form>
 </body>

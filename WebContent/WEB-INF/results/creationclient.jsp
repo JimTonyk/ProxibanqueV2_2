@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Proxibanque : Client ajouté à l'agence</title>
 </head>
 <body>
 	<h1>Résumé création client</h1>
