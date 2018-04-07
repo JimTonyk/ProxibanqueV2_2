@@ -10,7 +10,7 @@
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h1>Mise à jour des données du client</h1>
+		<h3>Mise à jour des données du client</h3>
 		<p />
 	</div>
 	<div id="content">
@@ -58,9 +58,10 @@
 					</table>
 				</fieldset>
 			</form>
-		<a href="gestionclients.jsp"> Retour à la liste des clients</a>
+			<a href="gestionclient.jsp?idClient=${param['idClient']}">Retour au menu précédent</a><br>
+			<a href="ListerClients"> Retour à la liste des clients</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

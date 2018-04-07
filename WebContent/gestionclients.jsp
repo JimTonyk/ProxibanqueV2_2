@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Proxibanque : Liste des clients de Proxibanque</title>
+<title>ProxiBanque - gestion client</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Liste des clients de Proxibanque</h3>
+		<h3>Liste des clients de ProxiBanque</h3>
 	</div>
 	<div id="content">
 		<div class="column1">
@@ -24,7 +24,7 @@
 				<tr>
 					<th>ID client</th>
 					<th>Nom</th>
-					<th>Prenom</th>
+					<th>Prénom</th>
 					<th>Adresse</th>
 					<th>Code postal</th>
 					<th>Ville</th>
@@ -46,6 +46,6 @@
 			<br> <a href="index.jsp">Retour au menu principal</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ProxiBanque - simulation de crédit</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h1>Simulation de crédit à la consommation</h1>
+		<h3>Simulation de crédit à la consommation</h3>
 		<p />
 	</div>
 	<div id="content">
@@ -19,10 +19,10 @@
 		</div>
 		<div class="column2">
 			<p>Votre mensualité est de : ${mensualite} &euro;.</p>
-			<a href="operations.html"> Retour à la liste des opérations
+			<a href="operations.html">Retour à la liste des opérations
 				bancaires</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

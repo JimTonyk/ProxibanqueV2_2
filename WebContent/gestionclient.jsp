@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proxibanque : Menu de gestion d'un client</title>
+<title>ProxiBanque - gestion client</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -36,6 +36,6 @@
 			</ul>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

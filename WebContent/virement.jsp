@@ -5,15 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Proxibanque : Réalisation d'un virement de compte à
-	compte</title>
+<title>Proxibanque - virement</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h1>Virement de compte à compte</h1>
-		<p />
+		<h3>Virement de compte à compte</h3>
 	</div>
 	<div id="content">
 		<div class="column1">
@@ -57,13 +55,10 @@
 						type="submit" value="Envoyer"> <input type="reset"
 						value="Reset">
 				</fieldset>
-
 			</form>
-			<a href="operations.html"> Retour à la liste des opérations
-				bancaires</a>
-
+			<a href="operations.html">Retour à la liste des opérations bancaires</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

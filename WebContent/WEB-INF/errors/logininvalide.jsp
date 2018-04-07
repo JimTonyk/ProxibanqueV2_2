@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Proxibanque : Conseiller inconnu</title>
+<title>ProxiBanque - erreur</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Erreur de création de compte courant !</h3>
+		<h3>Login invalide !</h3>
 	</div>
 	<div id="content">
 		<div class="column1">
@@ -25,7 +25,7 @@
 			<a href="login.html">Retour à la page de login</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 	<br>
 </body>
 </html>

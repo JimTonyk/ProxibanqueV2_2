@@ -4,14 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Client supprimé avec succès</title>
+<title>Proxibanque - client supprimé</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Supression du client : ${clientSupprime.nom} ${clientSupprime.prenom} 
-			${client.prenom}</h3>
+		<h3>Supression du client : ${clientSupprime.prenom} ${clientSupprime.nom}</h3>
 	</div>
 	
 	<p>Rappel des informations du client supprimé :</p>
@@ -62,6 +61,6 @@
 			<a href="ListerClients">Retour au menu de gestion des clients</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

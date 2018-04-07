@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proxibanque : Client ajouté à l'agence</title>
+<title>ProxiBanque - client ajouté</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Le client ${client.prenom} ${client.nom} a été ajouté à
-			Proxibanque</h3>
+		<h3>Le client ${client.prenom} ${client.nom} a été ajouté à la
+			base de données ProxiBanque</h3>
 		<p />
 	</div>
 	<div id="content">
@@ -53,9 +53,10 @@
 					</table>
 				</fieldset>
 			</form>
-		<a href="creerclient.html">Retour au menu "Création d'un client"</a>
+			<a href="creerclient.html">Retour au menu de création client</a><br>
+			<a href="ListerClients"> Retour à la liste des clients</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

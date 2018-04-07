@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proxibanque : Association de compte épargne</title>
+<title>Proxibanque - compte associé</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Compte épargne associé.</h3>
+		<h3>Compte épargne associé !</h3>
 	</div>
 	<div id="content">
 		<div class="column1">
@@ -39,9 +39,10 @@
 					</table>
 				</fieldset>
 			</form>
+			<a href="gestionclient.jsp?idClient=${param['idClient']}">Retour au menu précédent</a><br>
 			<a href="ListerClients">Retour à la gestion des clients</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Proxibanque : Erreur d'identification du conseiller</title>
+<title>ProxiBanque - erreur</title>
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
 		<img alt="" src="banner.jpeg" />
-		<h3>Erreur lors de la réalisation du virement !</h3>
+		<h3>Mot de passe invalide !</h3>
 	</div>
 	<div id="content">
 		<div class="column1">
@@ -23,6 +23,6 @@
 			<a href="login.html">Retour à la page de login</a>
 		</div>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>

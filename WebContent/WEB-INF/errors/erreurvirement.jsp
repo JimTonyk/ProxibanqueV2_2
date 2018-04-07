@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="style.css" rel="stylesheet">
-<title>Proxibanque : Erreur lors de la réalisation du virement</title>
+<title>ProxiBanque - erreur</title>
 </head>
 <body>
 	<div id="header">
@@ -19,7 +19,8 @@
 		<div class="column2" align="center">
 			La source (${param['idClientSrc']}) et la destination (${param['idClientSrc']}) sont identiques !
 		</div>
+			<a href="FaireVirementList">Retour au menu virements</a>
 	</div>
-	<div id="footer">&copy;Copyright Proxibanque 2018</div>
+	<div id="footer">&copy;Copyright ProxiBanque 2018</div>
 </body>
 </html>
